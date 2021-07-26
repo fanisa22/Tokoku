@@ -39,6 +39,7 @@ public class menu_utama extends javax.swing.JFrame {
         transaksiBtn = new javax.swing.JButton();
         laporanBtn = new javax.swing.JButton();
         barangBtn = new javax.swing.JButton();
+        logOutBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +85,11 @@ public class menu_utama extends javax.swing.JFrame {
 
         laporanBtn.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         laporanBtn.setText("Laporan");
+        laporanBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laporanBtnActionPerformed(evt);
+            }
+        });
 
         barangBtn.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         barangBtn.setText("Barang");
@@ -92,6 +98,9 @@ public class menu_utama extends javax.swing.JFrame {
                 barangBtnActionPerformed(evt);
             }
         });
+
+        logOutBtn.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        logOutBtn.setText("Log Out");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -108,6 +117,10 @@ public class menu_utama extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(laporanBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logOutBtn)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,7 +132,9 @@ public class menu_utama extends javax.swing.JFrame {
                     .addComponent(pelangganBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(transaksiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(barangBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 156, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                .addComponent(logOutBtn)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -160,6 +175,11 @@ public class menu_utama extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Transaksi().setVisible(true);
     }//GEN-LAST:event_transaksiBtnActionPerformed
+
+    private void laporanBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laporanBtnActionPerformed
+        // TODO add your handling code here:
+        new DaftarLaporan().setVisible(true);
+    }//GEN-LAST:event_laporanBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,6 +222,7 @@ public class menu_utama extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton laporanBtn;
+    private javax.swing.JButton logOutBtn;
     private javax.swing.JButton pelangganBtn;
     private javax.swing.JButton transaksiBtn;
     // End of variables declaration//GEN-END:variables
